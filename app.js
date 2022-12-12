@@ -1,15 +1,15 @@
 let saludo = "Bienvenido";
 console.log(saludo)
 
-let nombrecliente = prompt("Ingrese Nombre");
-let apellidocliente = prompt("Ingrese apellido");
+let nombreCliente = prompt("Ingrese Nombre");
+let apellidoCliente = prompt("Ingrese apellido");
 
-if (nombrecliente === "") 
+if (nombreCliente === "") 
 {console.log("Necesitas nombre de cliente");}
-else if (apellidocliente === "")
+else if (apellidoCliente === "")
 {console.log("Necesitas apellido de cliente");}
 else {
-console.log(nombrecliente + " " + apellidocliente)}
+console.log(nombreCliente + " " + apellidoCliente)}
 
 let producto = prompt(`Elija una opcion:
 1:Mancuernas
@@ -31,3 +31,13 @@ switch (producto)
                     console.log("Not Found");
                     break;
 }
+
+const carrito = [
+    {nombre: "Mancuernas", precio: 2500 },
+    {nombre: "Barras", precio: 4000 },
+    {nombre: "discos", precio: 3000 },
+];
+
+let resultado = carrito.reduce((accum, producto) => {return accum + producto.precio;}, 0);
+
+console.log(resultado);
